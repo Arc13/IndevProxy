@@ -30,14 +30,14 @@ When you have selected the version, you will have to click the "More options" bu
 ```
 (You have to properly set the proxy port if you changed it in the Python script)
 
-## What does it fixes?
+## What does it fix?
 ### Indev and Infdev generation
-Notch implemented in those versions of the game a little check to prevent the world from being generated if the game couldn't authenticate you against a specific server.
+Notch implemented a little check in those versions of the game to prevent the world from being generated if the game couldn't authenticate you against a specific server.
 Unfortunately, this server is no longer running as of today, thus rendering those versions unplayable because they will automatically return you to the main menu after having created the world.
 IndevProxy will bypass this authentication by simply sending a ``0`` to Minecraft whenever it attempts to contact ``www.minecraft.net/game/``, which is enough to fool the game and let us play.
 
 ### Sounds
-Minecraft Indev and Infdev does not produce any sound because they attempt to communicate with ``www.minecraft.net/resources/`` to get a list of assets to use, which also does not exist anymore.
+Minecraft Indev and Infdev do not produce any sound because they attempt to communicate with ``www.minecraft.net/resources/`` to get a list of assets to use, which also does not exist anymore.
 When IndevProxy detects a request to this address, it will attempt to get the list of pre-1.6 assets used by the official launcher from the Internet, and then convert this list to the format Indev/Infdev can understand.
 If sounds are already downloaded (something that the Minecraft launcher should already have done for you), this is enough for the game to have sounds again.
 
@@ -46,11 +46,11 @@ If sounds are already downloaded (something that the Minecraft launcher should a
 - Unfortunately, Mojang now only hosts post-Beta Sound Update sounds
 
 ### Skins and Capes
-Older versions of Minecraft uses older URL to get your player skin: ``www.minecraft.net/skin/``, ``s3.amazonaws.com/MinecraftSkins/`` and ``skins.minecraft.net/MinecraftSkins/``
+Older versions of Minecraft used different URLs to get your player skin: ``www.minecraft.net/skin/``, ``s3.amazonaws.com/MinecraftSkins/`` and ``skins.minecraft.net/MinecraftSkins/``
 IndevProxy will get the skin associated with the username using the current Mojang API, to send it to Minecraft.
 
 It will do the same to get the cape associated with the username, if there is one.
-In that case, the following URL are supported: ``www.minecraft.net/cloak/``, ``s3.amazonaws.com/MinecraftCloaks/`` and ``skins.minecraft.net/MinecraftCloaks/``
+In that case, the following URLs are supported: ``www.minecraft.net/cloak/``, ``s3.amazonaws.com/MinecraftCloaks/`` and ``skins.minecraft.net/MinecraftCloaks/``
 
 ### Saving and Loading
 IndevProxy will serve any request to ``www.minecraft.net/listmaps.jsp``, which has the effect to enable local saving and loading in Indev.
