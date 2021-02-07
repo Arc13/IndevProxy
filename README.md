@@ -59,6 +59,7 @@ IndevProxy will simply send a list of 5 empty save slots to emulate the fact tha
 ## Acknowledgments
 - Notch and [Mojang](https://www.mojang.com/), for their work on Minecraft
 - [20kdc](https://github.com/20kdc), for adding the cape support to IndevProxy
+- [KaDiWa4](https://github.com/KaDiWa4), for improving the installation method of this script 
 - [Proxy.py](https://github.com/abhinavsingh/proxy.py), the base of IndevProxy, allowing it to capture Minecraft requests
 - [Requests](https://requests-fr.readthedocs.io/en/latest/), to facilitate communicating with the Internet when it is required to use the Mojang API
 - [MCraft Client](https://github.com/ManiaDevelopment/MCraft-Client), for providing deobfuscated code for Minecraft Classic
