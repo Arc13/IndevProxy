@@ -302,9 +302,12 @@ class IndevProxyPlugin(HttpProxyBasePlugin):
             print('No handler found for endpoint {}'.format(request.url.path))
 
 
-if __name__ == '__main__':
+def main():
     proxy.main(
         hostname=ipaddress.IPv4Address('0.0.0.0'),
         port=PROXY_PORT,
         plugins=['indevproxy.IndevProxyPlugin']
     )
+
+if __name__ == '__main__':
+    main()
